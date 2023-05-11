@@ -170,4 +170,44 @@ console.log("============================================create string with new!
 const add = (str)=> str.indexOf("New!")===0 ? str : `New! ${str}`;
 console.log(add("New! offers"))
 
+console.log("============================================array functions problems- filter ====================================")
 
+let users =["sneha","trivikraman","moni","praveen","mugesh"]
+let value = users.filter((users)=> users.includes("e"));
+console.log(value)
+
+let value1 = users.filter((users)=> users.length<6);
+console.log(value1)
+
+console.log("============================================array functions problems- find ====================================")
+let val = ["sneha","trivikraman","moni","praveen","mugesh"]
+let find = val.find((val)=>val.includes("n"))
+console.log(find)
+console.log("============================================array functions problems- map ====================================")
+let valu = [1,2,3,4,5,6,7,7]
+let map = valu.map((valu)=>valu%2==0);
+console.log(map)
+let map1 = valu.map((valu)=>valu*2);
+console.log(map1)
+console.log("============================================array functions problems- every ====================================")
+let yes = [4,2,2,4,2,4,6]
+let apply = yes.every((yes)=>yes%2==0)
+console.log(apply)
+
+console.log("============================================array functions problems- some ====================================")
+
+{
+    let yes = [3,5,5,6,1]
+    let apply = yes.some((yes)=>yes%2==0)
+    console.log(apply)
+}
+console.log("============================================console types====================================")
+console.log("===============console.log===========")
+console.log("sneha")
+console.log("===============console.error===========")
+console.error("mistake")
+console.time("sneha")
+for(let i=0; i<10; i++){
+    console.count()
+}
+console.timeEnd("sneha")
