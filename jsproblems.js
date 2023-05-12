@@ -189,6 +189,21 @@ let map = valu.map((valu)=>valu%2==0);
 console.log(map)
 let map1 = valu.map((valu)=>valu*2);
 console.log(map1)
+
+// let object = [
+//     {name:"fruit" , color:"red"},
+//     {name:"orange", color:"orange"}
+// ]
+// dfruits=[]
+// dfruit={}
+// let add1 = dfruit.map((objet)=> {objet.calories = 1.2;
+//            dfruit = new Object;
+//            dfruits ={...dfruit}
+//            dfruits.push(dfruit)
+// }
+// );
+// console.log(object)
+
 console.log("============================================array functions problems- every ====================================")
 let yes = [4,2,2,4,2,4,6]
 let apply = yes.every((yes)=>yes%2==0)
@@ -211,3 +226,53 @@ for(let i=0; i<10; i++){
     console.count()
 }
 console.timeEnd("sneha")
+
+console.log("===============hoe to find max value in a numbered array===========")
+{
+    let array=[1,4,2,67,23,23,56,78,1,2,4]
+    let max = array.reduce((a,b)=>{return a>b? a: b})
+    console.log(max)
+}
+
+console.log("===============hoe to find min value in a numbered array===========")
+{
+    let array=[1,4,2,67,23,23,56,78,1,2,4]
+    let min = array.reduce((a,b)=>{return a<b? a: b})
+    console.log(min)
+}
+console.log("===============hoe to find average number in a numbered array===========")
+{
+    let array=[1,2,3,4,5]
+    let length = array.length
+    let sum = array.reduce((a,b)=>{return a+b})
+    let average = sum/length
+    console.log(average)
+}
+console.log("===============hoe to covert first character to uppercase  in a string array===========")
+{
+    let string=["sneha","moni","vikram"]
+    let up =[]
+    for (let i of string){
+        let days = i.charAt(0).toUpperCase()+i.substring(1);
+        up.push(days)
+    }
+    console.log(up)
+}
+console.log("===============how to covert string to uppercase  in a string array===========")
+{
+    let string=["sneha","moni","vikram"]
+    let up =[]
+    for (let i of string){
+        let days = i.toUpperCase()
+        up.push(days)
+    }
+    console.log(up)
+}
+
+console.log("===============how to make sentence out of a given array===========")
+{
+    let string=["sneha","is","a","girl"]
+    let join = string.join(' ')
+    console.log(join)
+}
+
