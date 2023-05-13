@@ -276,3 +276,92 @@ console.log("===============how to make sentence out of a given array===========
     console.log(join)
 }
 
+console.log("=======================practice===========")
+{
+    a=5/0
+    console.log(a)
+    console.log(Math.sqrt(-1))
+    console.log(typeof(a))
+    amount = 1000
+    console.log("your bill amount is",amount)
+}
+console.log("==================bitwise operator=====================")
+a=100
+console.log(a>50 ^a%10==0)
+console.log(a>50 |a%10==0)
+console.log(a>50 &a%10==0)
+console.log(~a)
+b=-101
+console.log(~b)
+a=2
+console.log(a<<1)
+console.log(a>>>2)
+
+console.log("========================how to check if an array contains any element of another array?=========================")
+{
+    const a =[1,2,3,4,5]
+    const b =[8,6,7]
+    let c = a.some((ele)=>b.includes(ele))
+    console.log(c)
+}
+console.log("========================given two strings, how can you check if the strings are anagram=========================")
+{
+    const a = "mary"
+    const b ="army"
+      
+    let c= a.split("").sort().join("")
+    let d= b.split("").sort().join("")
+    if (c===d){
+        console.log("given strings are anagram")
+    }
+    else{
+        console.log("it's not a anagram")
+    }
+}
+console.log("========================how can you extract a few fields from the given json object and form a new array?=========================")
+{
+    const input ={
+        student : [
+            {name:"sneha",id:4, email:"sneha@gmail.com"},
+            {name:"vikram",id:5,email:"vikram@gmail.com"}
+        ]
+    }
+    // const extract = input.student.map((item)=>{return item.name})
+    const extract = input.student.map((item)=>item.name)
+    console.log(extract)
+    const ex = input.student.map((item)=>{
+        let sub ={
+            name:item.name,
+            id : item.id,
+            email:item.email
+        }
+        return sub
+    })
+    console.log(ex)
+}
+console.log("========================fiter a given object based on certain conditions and retuen the corresponding object=========================")
+{
+    const input={
+      students:[
+        {name:"sneha",id:3,email:"sneha@gmail.com"},
+        {name:"vikram",id:4, email:"vikram@gmail.com"}
+      ]
+    }
+    const filter = input.students.filter((item)=>{return item.name.length<6 ? item :""})
+    console.log(filter)
+}
+console.log("=========================how to check if the variable passed is an array or not=====================================")
+{
+    function arraycheck(array){
+        if (Array.isArray(array)){
+            console.log("yes it is array")
+        }
+        else{
+            console.log("nope")
+        }
+    }
+    arraycheck([1,1,2,3,4])
+    arraycheck(3)
+}
+
+
