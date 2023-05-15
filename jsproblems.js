@@ -363,5 +363,103 @@ console.log("=========================how to check if the variable passed is an 
     arraycheck([1,1,2,3,4])
     arraycheck(3)
 }
+console.log("=========================given array of strings, reverse each word in the sentence===========================")
+{
+    const sneha ="sneha sudhakaran is a girl";
+    var rever = sneha.split("").reverse().join("");
+    console.log(rever)
+}
+console.log("=========================What is IIFS immediately invoked function expressions===========================")
+{
+    // function func(){
+    //     console.log("sneha")
+    // }
+    // func()
 
+    function func(){
+        console.log("sneha")
+    }
+    func();
+
+
+    (function fu(){
+        console.log("Ssss")
+    })();
+}
+function func(){
+        console.log("sneha")
+    }
+    func();
+console.log("=========================How to empty an array?===========================")
+{
+    let array=[1,23,4,5,6]
+     
+    // array=[] first method
+    // array.length=0 second method
+    // while(array.length>0){
+    //     array.pop()
+    // } third method
+
+    // array.splice(0,array.length); fourth method
+
+    console.log(array)
+}
+console.log("=========================Write a function to check if a given string is palindrome or not?===========================")
+{
+   let pa="Malayalam"
+   vas =pa.toLowerCase()
+   pa =pa.toLowerCase().split("").reverse().join("")
+   console.log(pa)
+   if (pa==vas){
+    console.log("true")
+   }
+   else{
+    console.log("false")
+   }
+}
+console.log("=====================how can you combine two arrays into a thired array using spread operator==========================")
+{
+    let f =[1,2,3,4,5]
+    let s =[2,4,5]
+    let t = [...f,...s]
+    console.log(t)
+}
+console.log("==========================how do you sort and reverse an array without changing the original array?")
+{
+    const array=[10,20,30,60,40,50,60]
+    const copyy = array.slice().reverse()
+    const copy = array.sort(function(a,b){return a-b}).reverse()
+    console.log(copy)
+    console.log(copyy)
+}
+console.log("=======================how can we replace an element at a specific index in an array?========================")
+{
+    const array = [10,20,30,40];
+    const ele = 50;
+    const index =2;
+    const copy = [...array.slice(0,2),ele,...array.slice(index+1)];
+    console.log(copy);
+}
+console.log("=======================how can we insert an element at a specific index in an array?========================")
+{
+    const array = [10,20,30,50,60,70];
+    const ele= 40;
+    const index=3;
+    const copy = [...array.slice(0,index),ele,...array.slice(index)]
+    console.log(copy)
+}
+console.log("=======================how can we delete an element at a specific index in an array?========================")
+{
+    const array = [10,20,30,50,60,70];
+    const index=3;
+    const copy = [...array.slice(0,index),...array.slice(index+1)]
+    console.log(copy)
+}
+console.log("=======================how can we delete an element at a specific element in an array?========================")
+{
+    const array = [10,20,30,50,60,70];
+    const ele= 50;
+    const copy = array.filter((item)=>item!==ele)
+    console.log(copy)
+}
 
