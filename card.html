@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Card</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Card Quantity</h1>
+        <button type="button" onclick="show()">Show Quantity</button>
+        <button type="button" onclick="add()">Add to cart</button>
+        <button type="button" onclick="two()">+2</button>
+        <button type="button" onclick="three()">+3</button>
+        <button type="button" onclick="four()">+4</button>
+        <button type="button" onclick="five()">+5</button>
+        <button type="button" onclick="ttwo()">-2</button>
+        <button type="button" onclick="tthree()">-3</button>
+        <button type="button" onclick="reset()">Reset</button>
+        <button type="button" onclick="remove()">Remove</button>
+        <script>
+            let card =0;
+            function show(){
+                console.log("Card quantity",card)
+            }
+            function add(){
+                card++;
+                console.log("card Quantity",card)
+            }
+            function two(){
+                card+=2;
+                console.log("Card quantity",card)
+            }
+            function three(){
+                card+=3;
+                console.log("Card quantity",card)
+            }
+            function four(){
+                card+=4;
+                console.log("Card quantity",card)
+            }
+            function five(){
+                card+=5;
+                console.log("Card quantity",card)
+            }
+            function ttwo(){
+                card-=2;
+                console.log("Card quantity",card)
+            }
+            function tthree(){
+                card-=3;
+                console.log("Card quantity",card)
+            }
+            function remove(){
+                card--;
+                console.log("card Quantity",card)
+            }
+            function reset(){
+                card=0;
+                console.log("card has reset")
+                console.log("Card quantity",card)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button type="button" onclick="one()">1</button>
+        <button type="button" onclick="two()">2</button>
+        <button type="button" onclick="three()">3</button>
+        <button type="button" onclick="add()">+</button>
+        <button type="button" onclick="equal()">=</button>
+
+        <script>
+            let calculation="";
+            function one(){
+                calculation=calculation+1;
+                console.log(calculation)
+            }
+            function two(){
+                calculation=calculation+2;
+                console.log(calculation)
+            }
+            function three(){
+                calculation+=3;
+                console.log(calculation)
+            }
+            function add(){
+                calculation= calculation + "+"
+                console.log(calculation)
+            }
+            function equal(){
+                calculation = eval(calculation);
+                console.log(calculation)
+            }
+        </script>
+    </body>
+</html>

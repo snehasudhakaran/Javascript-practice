@@ -463,3 +463,78 @@ console.log("=======================how can we delete an element at a specific e
     console.log(copy)
 }
 
+console.log("------------------------------if else---------------------------------")
+x=3;
+if (x>=16){
+    console.log("eligible")
+}
+else if (x>=14){
+    console.log("almost there! wait for one year")
+}
+else{
+    console.log("no")
+}
+
+
+let varr="sneha"
+console.log(`my name ${varr}`)
+
+coffee = 5;
+bagets = 3;
+soup=9;
+cost = coffee +(2*bagets)+soup
+tax=cost*10/100
+console.log(cost+tax)
+console.log("------------------------------how can we clone an object?---------------------------------")
+{
+    const obj ={
+        id:3,
+        name:"sneha",
+        age:21,
+        degree:"btech"
+    }
+    const obj1 ={...obj}
+    obj["name"]="vikram"
+    console.log(obj)
+    console.log(obj1)
+
+    const obj2 =Object.assign({},obj)
+    obj["name"]="sneha"
+    console.log(obj)
+    console.log(obj2)
+}
+console.log("------------------------------how to add an element at the beginning of array?---------------------------------")
+{
+    const array =[1,2,3,4,5,6,7,8]
+    const array1 =[9,...array]
+    console.log(array1)
+    array1.splice(0,0,10)
+    console.log(array1)
+    array1.unshift(11)
+    console.log(array1)
+}
+console.log("------------------------------how to remove an element at the end of array?---------------------------------")
+{
+    const array =[1,2,3,4,5,6,7,8]
+    const array1 =array.slice(0,-1)
+    console.log(array1)
+    array1.pop()
+    console.log(array1)
+}
+console.log("------------------------------how to split a sentence into array?---------------------------------")
+{
+    const array ="1 2 3 4 5 6 7 8"
+    const array1 = array.split(" ")
+    console.log(array1)
+}
+console.log("------------------------------how can you replace an existing element in an object?---------------------------------")
+{
+    const obj = {
+        id:10,
+        name:"sneha",
+    }
+    const obj1 ={...obj,name:"vikram"}
+    console.log(obj)
+    console.log(obj1)
+}
+
