@@ -19,46 +19,94 @@
         <button type="button" onclick="remove()">Remove</button>
         <script>
             let card =0;
+            
             function show(){
+                if (card>=10){
+                    alert("card is full")
+                }
+                else{
                 console.log("Card quantity",card)
+                }
             }
             function add(){
+                if (card>=10){
+                    alert("card is full")
+                }
+                else{
                 card++;
                 console.log("card Quantity",card)
+                }
             }
             function two(){
+                if (card>=10){
+                    alert("card is full")
+                }
+                else{
                 card+=2;
                 console.log("Card quantity",card)
+                }
             }
             function three(){
+                if (card>=10){
+                    alert("card is full")
+                }
+                else{
                 card+=3;
                 console.log("Card quantity",card)
+                }
             }
             function four(){
+                if (card>=10){
+                    alert("card is full")
+                }
+                else{
                 card+=4;
                 console.log("Card quantity",card)
+                }
             }
             function five(){
+                if (card>=10){
+                    alert("card is full")
+                }
+                else{
                 card+=5;
                 console.log("Card quantity",card)
+                }
             }
             function ttwo(){
+                if (card<=0){
+                    alert("card is empty")
+                }
+                else{
                 card-=2;
                 console.log("Card quantity",card)
+                }
             }
             function tthree(){
+                if (card<=0){
+                    alert("card is empty")
+                }
+                else{
                 card-=3;
                 console.log("Card quantity",card)
+                }
             }
             function remove(){
+                if (card<=0){
+                    alert("card is empty")
+                }
+                else{
                 card--;
                 console.log("card Quantity",card)
+                }
             }
             function reset(){
                 card=0;
                 console.log("card has reset")
                 console.log("Card quantity",card)
             }
+
+            
         </script>
     </body>
 </html>

@@ -537,4 +537,208 @@ console.log("------------------------------how can you replace an existing eleme
     console.log(obj)
     console.log(obj1)
 }
+console.log("--------------------------------quard operator--------------------------------------")
+{
+    const guard = NaN && "hello"
+    console.log(guard)
 
+    const guard1 = "hello" && 6;
+    console.log(guard1)
+}
+console.log("------------------------Default operator-----------------------")
+{
+    const default1 = "hello" || NaN;
+    console.log(default1)
+    const dfault = undefined || NaN;
+    console.log(dfault)
+}
+console.log("----------------------for each----------------------------")
+{
+    let array=[1,2,3,4,5]
+   
+    array.forEach(myfunction)
+    function myfunction(array){
+    console.log(array*2)
+    }
+}
+console.log("----------------------random sort----------------------------")
+{
+    let array = [1,2,3,4,5,6,7,8];
+    console.log(Math.max.apply(null,array))
+    console.log(Math.min.apply(null,array))
+    let array1 = array.sort(function(){return 0.5 - Math.random()})
+    console.log(array1)
+}
+
+console.log("-----------------------------sort a object--------------------------")
+{
+    const obj =[
+        {name:"sneha",
+        age:21},
+        {name:"vikram",age:10}
+
+    ]
+    const sortt = obj.sort(function(a,b){return a.age - b.age})
+    console.log(sortt)
+}
+console.log("----------------------------array keys and entries------------------------")
+{
+    const array = ["sneha","mugesh","doss","jegan"]
+    const keys = array.keys()
+    const entries = array.entries()
+    for (let k of keys){
+        console.log(k)
+    }
+    for (let e of entries){
+        console.log(e)
+    }
+}
+console.log("----------------if else practice----------------------------------------")
+{
+    hour = 10
+    name="sneha"
+    if (hour>=6 && hour<12){
+        console.log(`good morning ${name}`)
+    }
+    else if (hour >=12 && hour<17){
+        console.log(`good afternoon ${name}`)
+    }
+    else{
+        console.log(`good night ${name}`)
+    }
+
+    age=65
+    isHoliday =false
+    if((age<=6 || age>=65)&& isHoliday){
+        console.log("discount")
+    }
+    else{
+        console.log("no discount")
+    }
+}
+
+console.log("------------------random-------------------")
+{
+    const random = Math.random();
+    let result="";
+    guess="heads"
+    if (random<1/5){
+        result ="heads";
+    }
+    else{
+        result="tails";
+    }
+
+    // if (result===guess){
+    //     console.log("you won")
+    // }
+    // else{
+    //     console.log("you lost")
+    // }
+    const ter =(result===guess) ? "won" : "lost";
+    console.log(ter)
+}
+console.log("------------------------------How can add an element to an object? ------------------")
+{
+    const obj={
+        name:"sneha",
+        age:20,
+        id:1
+    }
+    obj["clg"]="Dr.M.G.R"
+    const array ={...obj,degree:"btech"}
+    console.log(array)
+}
+
+console.log("--------------------------remove first element array--------------------")
+{
+    const array=[1,2,3,4,5];
+    array.shift(0)
+    const array1=array.slice(1);
+    console.log(array1)
+}
+console.log("--------------------------how can you combine two objects?--------------------")
+{
+    const one={
+        name:"sneha"
+    }
+    const two={
+        name:"vikram",
+        age:21
+    }
+    const three={...one,...two}
+    console.log(three)
+}
+console.log("----------------------write a method which takes x numbers of parameters-----------------------")
+function get(...b){
+    console.log(...b)
+}
+get(34,67,90,56)
+
+console.log("----------------------convert a given number into exact decimal points to right side---------------------")
+{
+    n=234.567891
+    console.log(n.toFixed(1))
+}
+
+console.log("-------------------------how can you return a character from a string at a specific index?--------------------------")
+{
+    const str="welcome to my class"
+    const letter =str.charAt(0).toUpperCase()
+    console.log(letter+str.slice(1))
+}
+console.log("------------------explain weak set with example = wekset object allows collection unique key , but it doesn't allow keys of primitive values-------------------")
+
+{
+    const obj={
+        name:"sneha",
+        age:9
+    }
+    const obj1 = new WeakSet([obj])
+        console.log(obj1)
+}
+console.log("------------------write a add method using js curry concept?------------------")
+{
+    function number(x){
+        let sum=x;
+        function result(y){
+            sum+=y;
+            return result;
+        }
+
+            result.valueOf=function(){
+                return sum;
+            }
+            return result;
+
+        }
+        console.log(number(3)(4)(5).valueOf());
+
+}
+console.log("-------------------------curry function----------------------")
+{
+    function mul(a){
+         let mul=a;
+         function res(b){
+              mul*=b;
+              return res;
+         }
+         res.valueOf=function(){
+              return mul;
+         }
+         return res;
+    }
+    console.log(mul(2)(2)(2).valueOf())
+}
+console.log("--------------------------how to replace a given string in a given array----------------------")
+{
+    let arry=["sneha","sudhakaran"]
+    let arr = arry.map((val)=>val.replace('sudhakaran',"vikram"))
+    console.log(arr)
+}
+console.log("-------------------------------how to create an array out of a sentence--------------------------")
+{
+    const str="sneha is a girl who loves herself"
+    const str1=str.split(" ")
+    console.log(str1)
+}
