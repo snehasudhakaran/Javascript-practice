@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Head or Tail</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Heads and tails game</h1>
+        <button id="head" onclick="playerMove('heads')">Heads</button>
+        <button id="tails" onclick="playerMove('tails')">Tails</button>
+        <script>
+            let score1=JSON.parse(localStorage.getItem("score1"))||{
+                wins:0,
+                losses:0
+            }
+
+            let computerMove=""
+            let result=""
+            let count=0
+
+            function computerMove1(){
+                let random=Math.random()
+               if (random>0 && random<1/2){
+                computerMove="heads"
+               }
+               else{
+                computerMove="tails"
+               }
+               return computerMove
+            }
+
+            function playerMove(play){
+                computerMove1()
+                if (play===computerMove){
+                    result="it matches"
+                    score1.wins+=1;
+                }
+                else{
+                    result="not matches"
+                    score1.losses+=1
+                }
+                
+                localStorage.setItem("score1",JSON.stringify(score1))
+                alert(`computer move: ${computerMove} and player move: ${play} , result:${result} wins: ${score1.wins} losses: ${score1.losses}`)
+            }
+        </script>
+    </body>
+</html>

@@ -742,3 +742,572 @@ console.log("-------------------------------how to create an array out of a sent
     const str1=str.split(" ")
     console.log(str1)
 }
+
+console.log("-----------------------scope concept-----------------")
+{
+    function fruit(){
+        console.log(name)
+        // console.log(age)
+        var name="sneha"
+        // let age=21
+    }
+    fruit()
+}
+
+// {
+//     for (let i=0; i<3; i++){
+//        setTimeout(()=>console.log(i),1)
+//     }
+// }
+// {
+//     for (var i=0; i<3; i++){
+//        setTimeout(()=>console.log(i),1)
+//     }
+// }
+
+{
+    // console.warn(+true);
+            //  console.warn(+true);
+            // console.warn(typeof(+true));
+
+            console.log(+true)
+            console.log(typeof(+true));
+
+            console.log(!"anil")
+            console.log(+"anil")
+            console.log(typeof(!"anil"))
+            console.log(typeof(+"anil"))
+}
+
+{
+    let data="size";
+    let obj ={
+        size:"small"
+    }
+    console.log(obj[data]);
+    console.log(obj["size"]);
+    console.log(obj.size);
+    console.log(obj.data)
+}
+
+{
+    var x;
+    var x=10;
+    console.log(x);
+}
+
+{
+//     var x;
+//     // let x=10;
+//     console.log(x)
+}
+
+{
+    let a=3;
+    let b = new number(3)
+    console.log(a==b)
+    console.log(a===b)
+}
+{
+    let name;
+    nmee={}
+    console.log(name)
+}
+{
+    // let w1;
+    function fruit(){
+        console.log("woof",name)
+    }
+    fruit.name="vikram"
+    // fruit.weird="weird"
+    fruit()
+}
+{
+    let number=0
+    console.log(number++);
+    console.log(++number);
+    console.log(number)
+}
+{
+    function arr(...args){
+        console.log(typeof(args))
+    }
+    arr()
+}
+{
+    function get(){
+        "user strict"
+        age=21;
+        console.log(age);
+    }
+    get()
+}
+{
+    console.log(eval('10*10+5'))
+}
+
+{
+    const d= new Date()
+    console.log(d)
+    console.log(d.toDateString())
+    console.log(d.getMonth())
+    console.log(d.getFullYear())
+    console.log(d.getDay()+1)
+}
+
+{
+    const user=[
+        {id:1,name:"sneha",age:21},
+        {id:2,name:"vikram",age:22}
+    ]
+
+    const names=user.map((val)=>val.name)
+    console.log(names)
+}
+
+console.log("-----------------------duplicate----------------")
+
+{
+    const array=[1,34,2,4,2,8,9,9]
+    const array1=array.filter((val,i,arr)=>arr.indexOf(val)==i)
+    console.log(array1)
+}
+console.log("---------------------reverse---------------")
+{
+  str1="sneha sudhakaran"
+
+  reverse=""
+  for (let i of str1){
+    reverse=i+reverse
+  }
+  console.log(reverse)
+}
+
+console.log("------------------------------------prime numbers----------------")
+{
+    let num=7
+    let prime=""
+    for (let i=2; i<num; i++){
+        if (num%i==0){
+           prime="not prime"
+          break
+        }
+        else{
+            prime="it's a prime"
+        }
+    }
+    console.log(prime)
+}
+
+console.log("---------------------------palindrome-----------------------------")
+{
+    const str="malayalamq"
+
+    const str1=str.split("").reverse().join("");
+    if (str===str1){
+        console.log("yes it's palidrome ")
+    }
+    else{
+        console.log("not palidrome")
+    }
+}
+
+console.log("---------------------substring-----------------------------")
+{
+    const str="sneha sudhakaran"
+    console.log(str.includes("sneha6"))
+}
+
+console.log("-------------------------multiplication---------------")
+{
+a=[[1,2],[1,2]]
+b=[[4,5],[8,9]]
+c=[[0,0],[0,0]]
+
+for (let i=0; i<a.length; i++){
+    for (let j=0; j<b[0].length; j++){
+        for (let k=0; k<b.length; k++){
+             c[i][j]+=a[i][k]*b[k][j]
+        }
+    }
+}
+
+console.log(c)
+}
+
+console.log("-------------------------object------------------------------")
+{
+    const not={
+        name:"sneha",
+    }
+    not["college-name"]="mgr"
+    console.log(not["college-name"])
+}
+console.log("---------------------JSON---------")
+{
+    function ssvs(){
+
+    }
+    console.log(typeof ssvs)
+
+    const obj ={
+        name:"sneha",
+        married:null
+    }
+    console.log(JSON.stringify(obj))
+    n=JSON.stringify(obj)
+    console.log(JSON.parse(n))
+}
+
+console.log("-----------------------------------practice----------------------------------------")
+{
+    function greet(name="there"){
+        console.log("hi hello",name)
+    }
+    greet("sneha")
+    greet()
+
+    function fren(n){
+        fr=(n*9/5)+32
+        return fr
+    }
+    console.log(fren(25))
+
+
+    function c(n){
+        c=(n-32)*5/9
+        return c
+    }
+
+    console.log(c(86))
+console.log("---------------------")
+    function temperature(value,unit){
+        if (unit=="f"){
+            c= (value-32)*5/9
+        }
+        else{
+            c=(value*9/5)+32
+        }
+        return c
+    }
+    console.log(temperature(25,"c"))
+    console.log(temperature(86,"f"))
+}
+
+console.log("-------------------find a element----------------")
+
+{
+    const array=[1,3,5,6,6,3,1]
+    const array1 = array.filter((val,i,array)=>array.indexOf(val)!=i);
+    console.log(array1)
+    const array2 = array.filter((val,i,array)=>array.indexOf(val)==i);
+    console.log(array2)
+
+    for (i of array2){
+        for (j of array1){
+            if(i===j){
+                console.log(i , array2.indexOf(i))
+            }
+           
+        }
+    }
+    array2.splice(0,1)
+    array2.splice(0,1)
+    array2.splice(1,1)
+   console.log(array2)
+    
+
+    // const array=[1,34,2,4,2,8,9,9]
+    // const array1=array.filter((val,i,arr)=>arr.indexOf(val)==i)
+    // console.log(array1)
+}
+console.log("----------------------------fabonacci series------------------------------")
+
+{
+   function fib(n){
+    let a=0
+    let b=1
+
+    if (n==a){
+        console.log(a)
+    }
+    else if (n==b){
+        console.log(a)
+        console.log(b)
+    }
+    else{
+        console.log(a)
+        console.log(b)
+        for (i=2; i<n; i++){
+            c=a+b
+            a=b
+            b=c
+            console.log(c)
+        }
+    }
+   }
+
+   fib(7)
+}
+
+console.log("--------------------------factorial----------------------")
+{
+    function fac(n){
+        if (n==0){
+            return 1
+            
+        }
+        else{
+            return n*fac(n-1)
+        }
+    }
+    console.log(fac(5))
+    console.log(fac(1))
+}
+
+console.log("------------------------------empty array------------------")
+{
+    let a=[1,2,3,4,5]
+    a=[]
+    console.log(a)
+
+    let aa=[1,2,3,4,5];
+    while(aa.length){
+        aa.pop()
+    }
+    console.log(aa)
+
+    let aaa=[1,2,3,4,5];
+    aaa.splice(0,aaa.length)
+    console.log(aaa)
+}
+{
+    const a=Array.of(10,20)
+    console.log(a)
+
+    const aa= new Array(10)
+    console.log(aa)
+}
+
+console.log("------------------to compare-----------------------")
+{
+    var arr1=[2,9,6,8,4,7]
+    var arr2=[4,8,6,9,2,8]
+
+    const comparArr= (arr1.length == arr2.length) && arr1.every((val)=>{
+        if (arr2.indexOf(val)>-1){
+            return (val=[arr2.indexOf(val)])
+        }
+    })
+    console.log(comparArr)
+}
+
+console.log("-----------------------how to find intersection----------------")
+{
+    let arr1=[2,9,6,8,4,4,4];
+    let arr2 =[4,8,6,9,12];
+    const inter=arr1.filter((ele)=> arr2.includes(ele));
+    const unqiue = inter.filter((val,i,arr)=>arr.indexOf(val)==i)
+    console.log(unqiue)
+}
+
+console.log("-------------------find the element-----------------------")
+{
+    let arr1=[3,5,4,2,4,5,3];
+    const unqiue = arr1.filter((val,i, arr)=>arr.indexOf(val)!=i);
+    const value = arr1.filter((val,i , arr)=>{
+        if (unqiue.indexOf(val)===-1){
+            return val
+        }
+        
+    })
+    console.log(value)
+}
+
+console.log("-----------------------how to find union of two arrays set in javascript--------------------------------")
+{
+    var arr1=[1,2,3,5,4,6,3];
+    var arr2=[3,4,5,16,9,2,4];
+
+    var union =[...arr1, ...arr2]
+    console.log([...new Set (union)])
+}
+
+console.log("-----------------------convert c to f and f to c-----------------")
+{
+
+function temperatue(value,unit){
+    if (unit=="f"){
+        c=(value - 32)*5/9
+        u ="c"
+        return `${c} c`
+    }else{
+        c= (value*9/5)+32
+        u="f"
+        return `${c} f`
+    }
+    
+}
+
+console.log(temperature(25,"c"))
+console.log(temperature(86,"f"))
+
+
+// 
+}
+
+console.log("------------------------convert kilometer into miles----------------------------")
+{    
+    kilometer=200
+    factor=0.621371
+    miles=kilometer*factor
+    console.log(miles)
+}
+console.log("-----------------------practice--------------------------------")
+{
+    console.log("hello".length)
+    console.log((3).toString())
+    // console.log(null.toString())
+    // console.log(undefined.toString())
+}
+console.log("------------------------object-------------------")
+
+{
+obj ={
+    name:"sneha",
+    age:21
+}
+obj1 ={
+    name:"sneha",
+    age:21
+}
+
+obj2 =obj1
+console.log(obj===obj1) //it doesn't compare values in object
+console.log(obj2===obj1) // it checks the reference
+}
+
+console.log("------------------------destructing---------------")
+
+{
+    const odj ={
+        message:"hi"
+    }
+
+    const {message}=odj
+    console.log(message)
+
+    const obj = {
+        message,
+        method(){
+            console.log("hiiiiii")
+        }
+    }
+    console.log(obj.message)
+    obj.method()
+}
+
+const fruits = new Map([
+    ["sunday",0],
+    ["monday",1]
+])
+console.log(fruits)
+fruits.set("tuesday",2)
+console.log(fruits)
+console.log(fruits.get("monday"))
+
+for (let x of fruits.entries()){
+    console.log(x)
+}
+
+const sett=new Set([10,45,78])
+console.log(sett)
+for (let x of sett.values()){
+    console.log(x)
+}
+
+{
+    array2=[67,87,34,89]
+    console.log(array2 instanceof String)
+}
+{
+    const football={
+        baskball:2095,
+    }
+    console.log(football)
+    football.baskball = 2095+500
+    console.log(football)
+    football["delivery-time"]=3
+    console.log(football)
+}
+{
+    product1={
+        name:"phone",
+        price:25000
+    }
+    product2={
+        name:"tv",
+        price:25000
+    }
+    function compare(product1,product2){
+          if (product1.price>product1.price){
+             console.log("product2 is less expensive")
+          }
+          else if (product1.price<product2.price){
+            console.log("product1 is less expensive")
+          }
+          else{
+            console.log("product2 price is equal to product1")
+          }
+
+    }
+    compare(product1,product2)
+}
+{
+    const str="GOOD Morning"
+    console.log(str.toLowerCase())
+
+    text="test"
+    for (let i=0; i<10; i++){
+        text+="test"
+    }
+    console.log(text)
+}
+
+console.log("--------------------practice----------------------")
+{
+    const array=[2,4,52,3,1,2,1,3,2,3,5,6]
+    array.length=4
+    console.log(array)
+
+    const array1=[2,4,52,3,1,2,1,3,2,3,5,6]
+    const sum=array1.reduce((x,y)=>x+y)
+    console.log(sum)
+
+    const duplicate =array1.filter((val, i, arr)=>arr.indexOf(val)==i);
+    console.log(duplicate)
+
+    console.log([...new Set(array1)])
+
+    let x=10
+    x=(x++,x)
+    console.log(x)
+    
+    
+}
+{
+    let x=20
+    let y=30
+    temp=x
+    x=y
+    y=temp
+    console.log(x,y)
+
+}
+
+{
+    // let a=10
+    // let b=40
+    // [a,b]=[b,a]
+    // console.log(a,b)
+}
